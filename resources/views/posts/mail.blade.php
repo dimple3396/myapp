@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Test Mail</title>
+ <title>Collaboration</title>
 </head>
 <body>
- <p style="font-family:verdana;font-size:300%;"><b><i>Hello,</b></i></p>
- <p style="font-family:courier;font-size:100%;"><b><i>Organization Name:{{ $data['name']}}.</b></i></p>
- <p style="font-family:courier;font-size:80%;"><b><i>Email Id:{{ $data['email1']}}.</b></i></p>
- <p style="font-family:courier;font-size:200%;"><b><i>{{ $data['msg']}}.</b></i></p>
+<hr>
+<h2>Collaboration Activity Details</h2>
+<hr>
+<p style="font-family:courier;font-size:200%;"><b><i>Organizer's Name: {{ $data['name2']}}.</b></i></p><hr>
+<p style="font-family:courier;font-size:200%;"><b><i>Event Name: {{ $data['title']}}. </b></i></p><hr>
+<p style="font-family:courier;font-size:200%;"><b><i>Collaborating Organization Name:{{ $data['name']}}.</b></i></p><hr>
 </body>
 </html>
+
+
+

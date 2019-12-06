@@ -31,16 +31,7 @@
                     </div>
                 @endforeach
             @endif
-            <form action="send" method="POST">
-                {{ csrf_field() }}
-                <div class="form-group">
-                    <input type="email" class="form-control text-center" placeholder="Provide an email" name="email"><br>
-                    <input type="text" class="form-control text-center" placeholder="Organization Name" name="name"><br>
-                    <input type="email" class="form-control text-center" placeholder="Write your email" name="email1"><br>
-                    <input type="text" class="form-control text-center" placeholder="Write a message" name="msg"><br>
-                    <button type="submit" class="btn btn-primary btn-md" style="margin-left: 0px;margin: auto; display: block;"t>SEND</button>
-                </div>
-            </form>
+
         </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Bootstrap core JavaScript -->

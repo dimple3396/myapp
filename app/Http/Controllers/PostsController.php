@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Post;
 use DB;
+use App\Collab;
 
 
 
@@ -63,6 +64,7 @@ class PostsController extends Controller
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required',
+            'u_count'=>'required',
             'cover_image'=>'image|nullable|max:1999'
             ]);
             
@@ -86,9 +88,13 @@ class PostsController extends Controller
             $post=new Post;
             $post->title=$request->input('title');
             $post->body=$request->input('body');
+            $post->u_count=$request->input('u_count');
             $post->user_id=auth()->user()->id;
             $post->cover_image = $fileNameToStore;
             $post->save();
+
+
+        
 
             return redirect('/posts')->with('success','Post created!');
     }
@@ -134,7 +140,8 @@ class PostsController extends Controller
     {
         $this->validate($request,[
             'title'=>'required',
-            'body'=>'required'
+            'body'=>'required',
+            'u_count'=>'required'
             ]);
             
   //Handle file upload
@@ -154,6 +161,7 @@ class PostsController extends Controller
             $post=Post::find($id);
             $post->title=$request->input('title');
             $post->body=$request->input('body');
+            $post->u_name=$request->input('u_name');
             if($request->hasFile('cover_image')){
                 $post->cover_image = $fileNameToStore;
             }

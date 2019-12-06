@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<br><br><br>
 @section('content')
 <a href="/posts" class="btn btn-default">Go Back</a>
     <h1>{{$post->title}}</h1>
@@ -8,8 +9,11 @@
 <div>
     {!!$post->body!!}
 </div> 
+<div>
+    <h3 class="bg-secondary mycol">No. of Collaborations Required: {!!$post->u_count!!} </h3>
+</div>
 <hr>
-<small>Written on {{$post->created_at}} By {{$post->user->email}}</small> 
+<small>Written on {{$post->created_at}} By {{$post->user->name}}</small> 
 <hr>
 
 

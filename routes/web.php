@@ -13,18 +13,23 @@
 
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
-Route::get('/services', 'PagesController@services');
+Route::get('/gallery', 'PagesController@gallery');
 Route::resource('posts', 'PostsController');
-Route::get('email', function () {
-    return view('posts.email');
-});
-Route::get('email', 'MailController@send');
+
+Route::get('/posts/{id}/email', 'MailController@send');
 /*
 Route::get('/about', function () {
     return view('pages.about');
 });*/
-Auth::routes();
+Auth::routes(['verify' => true]);
+Route::get('/dashboard', 'DashboardController@index')->middleware('verified');
 
-Route::get('/dashboard', 'DashboardController@index');
-Route::get('send', 'MailController@send');
-Route::post('send', 'MailController@send');
+
+Route::match(['get', 'post'], '/botman', 'BotManController@handle');
+Auth::routes(['verify' => true]);
+Route::resource('slides', 'SliderController');
+
+Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/dashboard', function () {
+    // Only verified users may enter...
+//})->middleware('verified');

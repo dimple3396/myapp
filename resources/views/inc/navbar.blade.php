@@ -1,6 +1,4 @@
-
-
-      <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-white shadow-sm">
           <div class="container">
               <a class="navbar-brand" href="{{ url('/') }}">
                   {{ config('app.name', 'Laravel') }}
@@ -20,7 +18,7 @@
                         <a class="nav-link" href="/about">About</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="/services">Services</a>
+                        <a class="nav-link" href="/gallery">Gallery</a>
                       </li>            
                       <li class="nav-item">
                           <a class="nav-link" href="/posts">Posts</a>
@@ -42,7 +40,7 @@
                           @endif
                       @else
                       
-                          <ul class="nav-item dropdown">
+                          <li class="nav-item dropdown">
                              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                   {{ Auth::user()->name }} <span class="caret"></span>
                               </a>
@@ -59,7 +57,7 @@
                                       @csrf
                                   </form>
                               </div>
-                            </ul>
+                            </li>
                       @endguest
                   </ul>
               </div>

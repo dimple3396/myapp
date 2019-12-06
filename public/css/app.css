@@ -69,17 +69,6 @@ section {
   display: block;
 }
 
-/*.mbg {
-   background-image: url("/public/storage/img/123.jpg");
-
-   height: 100%; 
- 
-   
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-}*/
-
 body {
   height: 100%;
   margin: 0;
@@ -90,7 +79,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #f8fafc;
-  background-image: url("storage/img/123.jpg");
+  background-image: url("../storage/img/456.png");
   background-repeat: no-repeat;
 }
 
@@ -98,6 +87,10 @@ body {
   outline: 0 !important;
 }
 
+.mycol {
+  color: #000;
+  background-color: #5a6268;
+}
 
 hr {
   box-sizing: content-box;
@@ -5613,7 +5606,7 @@ a.badge-dark.focus {
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #e9ecef;
+  background-color: #67acf1;
   border-radius: 0.3rem;
 }
 
@@ -6833,9 +6826,9 @@ a.close.disabled {
 }
 
 .carousel-item {
-  position: relative;
+  position: center;
   display: none;
-  float: left;
+  float: center;
   width: 100%;
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
